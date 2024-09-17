@@ -49,7 +49,7 @@ gadgets = [
   }
 ]
 
-manufactures = [
+manufacturers = [
   {
     "name": "HomeTech Co.",
     "headquarters": "Berlin, Germany",
