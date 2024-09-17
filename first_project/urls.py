@@ -15,10 +15,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from tech_gadgets.views import start_page_view
+from django.shortcuts import redirect
+from django.urls import path, include
+
+def redirect_to_tech_gadgets(request):
+    return redirect('tech_gadgets/', permanent=True)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('' , start_page_view),
+    path('tech_gadgets/' ,include('tech_gadgets.urls') ),
+    path('', redirect_to_tech_gadgets)
 ]
