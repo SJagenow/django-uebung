@@ -40,12 +40,12 @@ class GadgetView(View):
                return JsonResponse(gadget_match)
            raise Http404() 
      def post(self, request, *args, **kwargs):
-                 try:
-                  data = json.loads(request.body)
-                  print(f"recived data: {data}")
-                  return JsonResponse({"response": "Das war was"})
-                 except:
-                  return JsonResponse({"response": "Das war wohl nix"})
+        try:
+             data = json.loads(request.body)
+             print(f"recived data: {data}")
+             return JsonResponse({"response": "Das war was"})
+        except:
+             return JsonResponse({"response": "Das war wohl nix"})
 
 
 
