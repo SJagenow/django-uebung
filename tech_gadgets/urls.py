@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import start_page_view,single_gadget_int_view,single_gadget_view, GadgetView ,RedirectToGadgetView
+from .views import start_page_view,single_gadget_int_view, GadgetView ,RedirectToGadgetView
 
 
 urlpatterns = [
