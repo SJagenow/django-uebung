@@ -3,7 +3,9 @@ from django.http import  JsonResponse ,HttpResponseNotFound ,Http404
 import json
 from django.utils.text import slugify
 from django.urls import reverse
-from .dummy_data import gadgets
+from .dummy_data import gadgets , manufacturers
+#Create your views here.
+# wearabletracker-x10
 from django.views import View
 from django.views.generic.base import RedirectView
 
@@ -35,14 +37,16 @@ class GadgetView(View):
          for gadget in gadgets:
            if slugify(gadget["name"]) == gadget_slug:
               gadget_match = gadget
+             
 
            if gadget_match:
                return JsonResponse(gadget_match)
-           raise Http404() 
+           raise Http404("Gadget not found") 
+         
      def post(self, request, *args, **kwargs):
         try:
              data = json.loads(request.body)
-             print(f"recived data: {data}")
+             print(f"recived data: {data["test"]}")
              return JsonResponse({"response": "Das war was"})
         except:
              return JsonResponse({"response": "Das war wohl nix"})

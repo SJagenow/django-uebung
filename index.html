@@ -8,9 +8,10 @@
 <script>
     
 
-    const fetchGetUrl = "http://127.0.0.1:8000/tech_gadgets/gadget/1";
+        const fetchGetUrl = "http://127.0.0.1:8000/tech_gadgets/gadget/1";
         const fetchPostUrl = "http://127.0.0.1:8000/tech_gadgets/gadget/";
-
+        const fetchGetManufacturesUrl = "http://127.0.0.1:8000/tech_gadgets/manufactures/1";
+        const fetchPostManufacturesUrl = "http://127.0.0.1:8000/tech_gadgets/manufactures/";
 
         async function fetchTestGet() {
             let result = await fetch(fetchGetUrl)
@@ -34,7 +35,11 @@
 
         }
 
-    
+     
+
+
+
+
 </script>
 <body>
     <button onclick="fetchTestGet()"> empfange Daten </button>
