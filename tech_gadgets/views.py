@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.http import HttpResponse, JsonResponse ,HttpResponseNotFound ,Http404 
+from django.http import  JsonResponse ,HttpResponseNotFound ,Http404 
 import json
 from django.utils.text import slugify
 from django.urls import reverse
