@@ -14,7 +14,7 @@
         const fetchPostManufacturesUrl = "http://127.0.0.1:8000/tech_gadgets/manufactures/";
 
         async function fetchTestGet() {
-            let result = await fetch(fetchGetUrl)
+            let result = await fetch(fetchGetManufacturesUrl)
             let resultToText = await result.text()
             console.log(resultToText);
         }
@@ -22,7 +22,7 @@
         async function fetchTestPost() {
             const data = { "test": "funktioniert" };
 
-            let response = await fetch(fetchPostUrl, {
+            let response = await fetch(fetchPostManufacturesUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
