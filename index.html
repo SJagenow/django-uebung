@@ -14,7 +14,7 @@
         const fetchPostManufacturersUrl = "http://127.0.0.1:8000/tech_gadgets/manufacturers/list/";
 
         async function fetchTestGet() {
-            let result = await fetch(fetchGetManufacturersUrl)
+            let result = await fetch(fetchGetManufacturersUrl,)
             let resultToText = await result.text()
             console.log(resultToText);
         }

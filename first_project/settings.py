@@ -71,6 +71,7 @@ CORS_ALLOWED_ORIGINS = [
 
 ]
 
+
 ROOT_URLCONF = 'first_project.urls'
 
 TEMPLATES = [
