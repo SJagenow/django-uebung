@@ -16,7 +16,7 @@ urlpatterns = [
     path('manufacturers/', RedirectToManufacturersView.as_view()), 
     path('manufacturers/list/', ManufacturersView.as_view()), 
     path('manufacturers/<int:manufacturers_id>/', single_manufacturers_int_view),  
-    path('manufacturers/<slug:manufacturers_slug>/', ManufacturersView.as_view(), name="manufacturers_slug_url"),  # Hersteller mit Slug
+    path('manufacturers/<slug:manufacturers_slug>/', ManufacturersView.as_view(), name="manufacturers_slug_url"),  
 
 
     ]   
